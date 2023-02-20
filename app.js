@@ -1,10 +1,12 @@
 const express = require("express");
+require('dotenv').config()
 const app = express();
 const {
   models: { User },
 } = require("./db");
 const path = require("path");
 
+console.log(process.env.JWT);
 // middleware
 app.use(express.json());
 
